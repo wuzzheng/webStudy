@@ -1,0 +1,13 @@
+/* 
+    行内元素不具有width,height属性
+*/
+div,span{
+    background-color: #00aaee;
+    border: solid #666 1px;
+}
+div{
+    display: inline;
+}
+span{
+    display: block;
+}

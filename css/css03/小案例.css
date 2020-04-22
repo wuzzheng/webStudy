@@ -1,0 +1,38 @@
+body,div,p{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 300px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+}
+.box .title{
+    height: 150px;
+    background-color: #000;
+}
+.box .title p{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 60px;
+}
+.list{
+    margin: 0 10px;
+}
+.list1,.list2,.list3 {
+    padding: 10px 0;
+    border-bottom: 1px solid #d3d3d3;
+}
+.list3{
+    border-bottom: none;
+}
+.list-title{
+    font-size: 24px;
+}
+.list-detail{
+    font-size: 14px;
+    color: #aeaeae;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 案例</title>
+    <style>
+        *{
+          margin: 0;
+          padding: 0;  
+        }
+        .index{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .index img{
+            width: 200px;
+            height: 80px;
+            float: left;
+            margin-left: 40px;
+        }
+        .index .header{
+            background-color: #ddd;
+            overflow: hidden;
+        }
+        .list{
+            list-style: none;
+            float: right;
+            margin-right: 40px;
+        }
+        .list li{
+            float: left;
+            margin: 0 40px;
+
+        }
+        .list li a{
+            text-decoration: none;
+            color:#000;
+            display: block;
+            height: 80px;
+            line-height: 80px;
+            font-size: 18px;
+        }
+        .list li a:hover{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="index">
+        <div class="header">
+            <div><img src="./logo.png"> </div>
+            <div>
+                <ul class="list">
+                    <li><a href="#">免费课程</a></li>
+                    <li><a href="#">职业路径</a></li>
+                    <li><a href="#">实战</a></li>
+                    <li><a href="#">猿问</a></li>
+                    <li><a href="#">手记</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

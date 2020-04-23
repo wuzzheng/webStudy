@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 1000px;
+            height: 1000px;
+            border: 1px solid black;
+            line-height: 1000px;
+            text-align: center;
+
+        }
+
+        .box:nth-child(1) {
+            position: relative;
+            top: 10px;
+            left: 10px;
+            background-color: gold;
+        }
+
+        .box .box:nth-child(1) {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: green;
+        }
+        .box:nth-child(2){
+            line-height: 40px;
+            height: 40px;
+            background-color: hotpink;
+            position: sticky;
+            top:0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        绝对定位
+        <div class="box">
+            相对定位
+        </div>
+    </div>
+    <div class="box">
+        磁吸定位
+    </div>
+    <div class="box">
+        
+    </div>
+    <div class="box">
+        
+    </div>
+    <div class="box">
+        
+    </div>
+    <div class="box">
+        
+    </div>
+    <div class="box">
+        
+    </div>
+    <div class="box">
+        
+    </div>
+
+</body>
+
+</html>

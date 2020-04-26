@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本</title>
+    <style>
+        #app {
+            width: 200px;
+            background-color: #abcdef;
+
+            /* 单行 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 20px;
+
+
+        }
+
+        #root {
+            /* 多行溢出处理 */
+            width: 250px;
+            background-color: #abcdef;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <span>这是一段文本，溢出会隐藏。真的</span>
+    </div>
+    <div id="root">
+        <span>
+            这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本这是多行文本
+        </span>
+    </div>
+</body>
+
+</html>

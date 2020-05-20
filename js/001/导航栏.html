@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 600px;
+            width: 800px;
+            background-color: #abcdef;
+            margin: 60px auto;
+        }
+        ul{
+            list-style: none;
+            color: #fff;
+            overflow: hidden;
+        }
+        .list{
+            width: 800px;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .list ul li{
+            float: left;
+            display: block;
+            height: 100%;
+            width: 25%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 35px;
+        }
+
+        .content{
+            position: relative;
+        }
+        .item{
+            position: absolute;
+            width: 100%;
+            height: 540px;
+            /* background-color: rgb(147, 173, 51); */
+            font-size: 80px;
+            text-align: center;
+            line-height: 540px;
+            display: none;
+        }
+        .list_item{
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="list">
+            <ul>
+                <li class="list_item">首页</li>
+                <li>服务</li>
+                <li>圈子</li>
+                <li>我的</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="item" style="display: block;">第一个导航</div>
+            <div class="item" style="background: url('img/2.jpg')  100% no-repeat;">第二个导航</div>
+            <div class="item" style="background: url('img/3.jpg') center;">第三个导航</div>
+            <div class="item" style="background: url('img/4.jpg') center;">第四个导航</div>
+        </div>
+    </div>
+
+
+    <script>
+        window.onload = function(){
+            var lis = document.getElementsByTagName('li')
+            var items = document.getElementsByClassName('item')
+            console.log(lis)
+            for(var i = 0; i < lis.length; i++){
+                lis[i].index = i;
+                lis[i].onmousemove = function(){
+                    for(var j = 0; j<items.length;j++){
+                        lis[j].className = ""
+                        items[j].style.display = 'none'
+                    }
+                    this.className = "list_item"
+                    items[this.index].style.display = "block"
+                }
+            }
+        }
+    </script>
+</body>
+</html>

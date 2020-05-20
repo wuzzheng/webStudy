@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            background: url("./img/1.jpg") no-repeat;
+            background-size: 100%;
+
+        }
+        ul{
+            width: 600px;
+            height: 100px;
+            border: 1px solid red;
+            background-color: rgba(0, 0, 0, 0.4);
+            list-style: none;
+            margin: 0 auto;
+        }
+        li{
+            border: blue 1px solid;
+            overflow: hidden;
+            width: 100px;
+
+            float: left;
+            margin: 20px;
+        }
+        li img{
+            display: block;
+            float: left;
+            width: 100%;
+        }
+        li img:hover{
+            cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li><img src="./img/1.jpg" /></li>
+            <li><img src="./img/2.jpg" /></li>
+            <li><img src="./img/3.jpg" /></li>
+            <li><img src="./img/4.jpg" /></li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function(){
+            let imgs = document.getElementsByTagName('img')
+            console.log(imgs);
+            for(var i = 0; i < imgs.length; i++){
+                imgs[i].onclick = function(){
+                    console.log(this.src);
+                    document.body.style.backgroundImage = 'url('+ this.src+')'
+                }
+            }
+        }
+    </script>
+</body>
+</html>

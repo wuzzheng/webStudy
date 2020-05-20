@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #small{
+            width: 800px;
+            height: 800px;
+            background-color: red;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="child">
+            <div id="small">
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var son = document.getElementById('small')
+        console.log(son.offsetParent)
+        console.log(son.offsetTop,son.offsetLeft);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function doc(str){
+            document.write('<h1>'+ str +'</h1><br>')
+        }
+        function foo1(){
+            // 无参无返回函数
+            document.write('<h1>Hello World  --foo1</h1><br/>')
+        }
+        foo1()
+        function foo2(){
+            // 无参有返回
+            return "Hello Wrold  --foo2"
+        }
+        function foo3(v1,v2){
+            return v1 + v2
+        }
+
+        
+        doc(foo2())
+        doc(foo3(1,2))
+
+    </script>
+</body>
+</html>

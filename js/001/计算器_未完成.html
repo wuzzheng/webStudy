@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: #000;
+            height: 800px;
+            width: 500px;
+            margin: 0 auto;
+            color: #FFF;
+            font-size: 35px;
+
+
+        }
+
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            cursor: pointer;
+            user-select: none;
+
+        }
+
+        .text {
+            width: 100%;
+            height: 30%;
+            /* border: 1px solid red; */
+            font-size: 80px;
+            position: relative;
+
+        }
+
+        .text span {
+
+            /* border: 1px solid blue; */
+            display: block;
+            position: absolute;
+            padding: 10px 40px;
+            bottom: 0;
+            right: 0;
+
+        }
+
+        .jisuan {
+            /* border: 1px solid red; */
+            height: 70%;
+            padding: 0 20px;
+        }
+
+        .top {
+            height: 80%;
+            /* border: 1px solid red; */
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        ul li {
+            /* float: left; */
+            border: 1px solid;
+            width: 100px;
+            /*每个元素的初始化宽度*/
+            text-align: center;
+            line-height: 100px;
+            margin: 6px 7px;
+            /* margin-top: 10px;
+            margin-bottom: 10px; */
+            height: 100px;
+            border-radius: 100%;
+            border-style: none;
+            background-color: rgb(150, 150, 150);
+        }
+
+        .top ul li.teshu {
+            background-color: rgb(255, 253, 253);
+            color: #000;
+        }
+
+        .ysf {
+            color: #FFF;
+            background-color: rgb(255, 181, 43);
+        }
+
+        .ling {
+            width: 170px;
+            text-align: left;
+            border-radius: 0;
+            border-top-left-radius: 65px;
+            border-bottom-left-radius: 65px;
+            border-bottom-right-radius: 65px;
+            border-top-right-radius: 65px;
+            padding-left: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="text">
+            <span class="result"></span>
+        </div>
+        <div class="jisuan">
+            <div class="top">
+                <ul class="list">
+                    <li class="teshu" value="AC">AC</li>
+                    <li class="teshu" value="+-">+/-</li>
+                    <li class="teshu" value="%">%</li>
+                    <li class="ysf" value="÷">÷</li>
+                    <li value="7">7</li>
+                    <li value="8">8</li>
+                    <li value="9">9</li>
+                    <li class="ysf" value="×">×</li>
+                    <li value="4">4</li>
+                    <li value="5">5</li>
+                    <li value="6">6</li>
+                    <li class="ysf" value="－">－</li>
+                    <li value="1">1</li>
+                    <li value="2">2</li>
+                    <li value="3">3</li>
+                    <li class="ysf" value="＋">＋</li>
+                </ul>
+            </div>
+            <div class="bottom">
+                <ul>
+                    <li class="ling">0</li>
+                    <li>·</li>
+                    <li class="ysf">=</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.onload = function(){
+            var res = document.getElementsByClassName('result')
+            console.log(res);
+            
+        }
+        var res = document.getElementsByClassName('result')
+        let lis = document.getElementsByTagName('li')
+        var count1 = ""
+        var count2 = ""
+        var pointLeft = ""
+        var pointRight = 0
+        console.log(lis)
+        
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onclick = function () {
+                // if(this.textContent === "AC"){
+                //     console.log("AC")
+                // }
+                switch (this.textContent) {
+                    case "AC":
+                        console.log("AC");
+                        // var res = document.getElementsByClassName('result')
+                        console.log(res[0].textContent = "");
+                        break
+                        break;
+                    case "+/-":
+                        console.log("+/-");
+                        break;
+                    case "%":
+                        console.log("%");
+                        break;
+                    case "÷":
+                        console.log("÷");
+                        break;
+                    case "×":
+                        console.log("×");
+                        break;
+                    case "－":
+                        console.log("－");
+                        break;
+                    case "＋":
+                        console.log("＋");
+                        break;
+                    case "=":
+                        console.log("=");
+                        break
+                    case "·":
+                        // console.log("·");
+                        
+                        // if (pointLeft !== ".") {
+                        //     pointLeft = '.'
+                        //     count1 = res[0].textContent += pointLeft
+                        //     return
+                        // }
+
+                        
+                        
+                        break
+                    case "0":
+                        console.log(count1 = (res[0].textContent += "0"));
+                        console.log(count1);
+
+                        break
+                    case "1":
+                        console.log("1");
+                        break;
+                    case "2":
+                        console.log("2");
+                        break;
+                    case "3":
+                        console.log("3");
+                        break;
+                    case "4":
+                        console.log("4");
+                        break;
+                    case "5":
+                        console.log("5");
+                        break;
+                    case "6":
+                        console.log("6");
+                        break;
+                    case "7":
+                        console.log("7");
+                        break;
+                    case "8":
+                        console.log("8");
+                        break;
+                    case "9":
+                        console.log("9");
+                        break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
